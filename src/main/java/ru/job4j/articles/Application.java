@@ -1,5 +1,5 @@
 package ru.job4j.articles;
-d
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.job4j.articles.service.SimpleArticleService;

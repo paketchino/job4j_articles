@@ -23,6 +23,7 @@ public class SimpleArticleService implements ArticleService {
     }
 
     /**
+     *
      * Исходный код
      * var articles = IntStream.iterate(0, i -> i < count, i -> i + 1)
      *              .peek(i -> LOGGER.info("Сгенерирована статья № {}", i))
@@ -32,11 +33,12 @@ public class SimpleArticleService implements ArticleService {
      */
 
     /**
+     *
      * Второй Вариант
      *  IntStream.iterate(0, i -> i < count, i -> i + 1)
      *                 .peek(i -> LOGGER.info("Сгенерирована статья № {}", i))
      *                 .mapToObj((x) -> articleGenerator.generate(words))
-     *                 .forEach(articleStore::save);
+     *                 .forEach((x) -> new WeakReference<>(articleStore.save(x)));
      */
 
     @Override
